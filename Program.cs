@@ -10,7 +10,8 @@ namespace HerramientasProgramacionI
             // Clase_11_08_2021();
             // Clase_13_08_2021();
             // Clase_18_08_2021();
-            Clase_20_08_2021();
+            // Clase_20_08_2021();
+            Clase_25_08_2021();
 
             // Extra
             Console.ReadLine();
@@ -341,6 +342,146 @@ namespace HerramientasProgramacionI
                     Console.WriteLine("El mayor es: " + num_tres);
                 }
             }
+        }
+
+        static void Clase_25_08_2021()
+        {
+            Clase_25_08_2021_img1();
+            Clase_25_08_2021_img2();
+            Clase_25_08_2021_ejercicio1();
+            Clase_25_08_2021_ejercicio2();
+        }
+
+        static void Clase_25_08_2021_img1()
+        {
+            Console.Write("Entre su nombre: ");
+            string nombre = Console.ReadLine();
+
+            Console.Write("Entre su apellido: ");
+            string apellido = Console.ReadLine();
+
+            Console.WriteLine("Hola, {0} {1}!", nombre, apellido);
+
+            Console.Write("a = ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.Write("b = ");
+            int b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+            Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+
+            Console.Write("f = ");
+            double f = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("{0} por {1} dividido {2} = {3:F2}", a, b, f, a * b / f);
+
+            Console.Write("a = ");
+            a = int.Parse(Console.ReadLine());
+
+            Console.Write("b = ");
+            b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(a + " + " + b + " = " + (a + b));
+            Console.WriteLine(a + " * " + b + " = " + (a * b));
+
+            Console.Write("f = ");
+            f = double.Parse(Console.ReadLine());
+
+            Console.WriteLine(a + " * " + b + " dividido por " + f + " = " + (a * b / f));
+        }
+
+        static void Clase_25_08_2021_img2()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" === Imagen 2 === ");
+            Console.WriteLine();
+
+            Console.Write("Entre su nombre: ");
+            string persona = Console.ReadLine();
+
+            Console.Write("Entre el nombre del libro: ");
+            string libro = Console.ReadLine();
+
+            string de = "Equipo de autores";
+            Console.WriteLine(" Estimado {0},", persona);
+            Console.Write("Amablemente le informamos " +
+                "que \"{1}\" es un excelente libro. {2}" +
+                "Los autores del libro le deseamos que lo disfrute {0}!{2}",
+                persona, libro, Environment.NewLine);
+
+            Console.WriteLine(" Atte,");
+            Console.WriteLine(" {0}", de);
+
+            Console.WriteLine("Este programa calcula " +
+                "el área de un rectángulo o un triángulo ");
+            Console.WriteLine("Entre a y b (para el rectángulo) " +
+                "o a y h (para el triángulo): ");
+
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Entre 1 para el rectángulo o " +
+                "2 para el triángulo: ");
+            int elegir = int.Parse(Console.ReadLine());
+
+            double area = (a * b) / elegir;
+            Console.WriteLine("El área de su figura es " + area);
+        }
+
+        static void Clase_25_08_2021_ejercicio1()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" === Ejercicio 1 === ");
+            Console.WriteLine();
+
+            Console.Write("Ingresa el radio: ");
+            double radio = double.Parse(Console.ReadLine());
+
+            Console.Write("Ingresa la medida de un lado: ");
+            double lado = double.Parse(Console.ReadLine());
+
+            Console.Write("Ingresa la altura: ");
+            double altura = double.Parse(Console.ReadLine());
+
+            double aCirculo = Math.PI * Math.Pow(radio, 2);
+            Console.WriteLine("El área del círculo es {0:F2}", aCirculo);
+
+            double aCuadrado = lado * lado;
+            Console.WriteLine("El área del cuadrado es {0:F2}", aCuadrado);
+
+            double vCilindro = altura * aCirculo;
+            Console.WriteLine("El volumen del cilindro es {0:F2}", vCilindro);
+
+            double vCubo = aCuadrado * lado;
+            Console.WriteLine("El volumen del cubo es {0:F2}", vCubo);
+
+            double vEsfera = 4/3 * Math.PI * Math.Pow(radio, 3);
+            Console.WriteLine("El volumen de la esfera es {0:F2}", vEsfera);
+        }
+
+        static void Clase_25_08_2021_ejercicio2()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" === Ejercicio 2 === ");
+            Console.WriteLine();
+
+            int a = 7 + 9;
+            Console.WriteLine(a);
+
+            string firstName = "Juan";
+            string lastName = "Pistolas";
+            string fullName = firstName + " " + lastName;
+            Console.WriteLine(fullName);
+
+            a = 3;
+            int b = 5;
+            Console.WriteLine((++a) + (b++));
+            Console.WriteLine((a++) + (b++));
+            Console.WriteLine((a) + (++b));
+            Console.WriteLine((a++) + (++b));
+            Console.WriteLine((a) + (b++));
+            Console.WriteLine("a = {0} y b = {1}", a, b);
         }
     }
 }
