@@ -11,7 +11,8 @@ namespace HerramientasProgramacionI
             // Clase_13_08_2021();
             // Clase_18_08_2021();
             // Clase_20_08_2021();
-            Clase_25_08_2021();
+            // Clase_25_08_2021();
+            Clase_27_08_2021();
 
             // Extra
             Console.ReadLine();
@@ -483,5 +484,136 @@ namespace HerramientasProgramacionI
             Console.WriteLine((a) + (b++));
             Console.WriteLine("a = {0} y b = {1}", a, b);
         }
+
+        static void Clase_27_08_2021()
+        {
+            Clase_27_08_2021_ejercicio1();
+            Clase_27_08_2021_ejercicio2();
+            Clase_27_08_2021_ejercicio3();
+        }
+
+        static void Clase_27_08_2021_ejercicio1()
+        {
+            byte a = 3;
+            byte b = 5;
+
+            Console.WriteLine(a | b); // 0000 0111 = 7  OR
+            Console.WriteLine(a & b); // 0000 0001 = 1  AND
+            Console.WriteLine(a ^ b); // 0000 0110 = 6  OR EXCLUSIVO
+            Console.WriteLine(~a & b); // 0000 0100 = 4
+            Console.WriteLine(a << 1); // 0000 0110 = 6  DESPLAZAMIENTO A LA IZQUIERDA (MULTIPLICAR
+            Console.WriteLine(a << 2); // 0000 1100 = 12
+            Console.WriteLine(a >> 1); // 0000 0001 = 1  DESPLAZAMIENTO A LA DERECHA
+            Console.WriteLine((a ^ b) & (a << 2));
+        }
+
+        static void Clase_27_08_2021_ejercicio2()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" === Ejercicio 2 === ");
+            Console.WriteLine();
+
+            Console.Write("Ingresa un número: ");
+            int num1 = int.Parse(Console.ReadLine());
+            if (num1 <= 1 || num1 > 10)
+            {
+                Console.WriteLine("El número debe ser menor a 10 y mayor a 1.");
+                return;
+            }
+
+            int num = num1;
+            int resultado = 0;
+            if (num > 0)
+            {
+                resultado = num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            if (num > 0)
+            {
+                resultado *= num;
+                num -= 1;
+            }
+
+            Console.WriteLine("El factorial de {0} es {1}", num1, resultado);
+        }
+
+        static void Clase_27_08_2021_ejercicio3()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" === Ejercicio 3 === ");
+            Console.WriteLine();
+
+            int x = 10, y = 5;
+            Console.WriteLine("x > y : " + (x > y));
+            Console.WriteLine("x < y : " + (x < y));
+            Console.WriteLine("x >= y : " + (x >= y));
+            Console.WriteLine("x <= y : " + (x <= y));
+            Console.WriteLine("x == y : " + (x == y));
+            Console.WriteLine("x != y : " + (x != y));
+
+            int a = 5;
+            int b = 7;
+            int c = 5;
+
+            c *= a += b;
+            c *= a += b;
+
+            Console.WriteLine("a = {0}, b = {1}, c = {2}", a, b, c);
+        }
     }
-}
+}   
